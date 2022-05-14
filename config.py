@@ -1,9 +1,12 @@
+import os
+
 class config:
     '''
     parent configuration
 
     '''
-    pass
+    QUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
+   
 
 class ProdConfig(config):
     '''
