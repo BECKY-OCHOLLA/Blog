@@ -5,4 +5,6 @@ from app import app
 def index():
 
 
-    return render_template('index.html')
+
+    title ='Bekitas Blog'
+    return render_template('index.html',title=title)
