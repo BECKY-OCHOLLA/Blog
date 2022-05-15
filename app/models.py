@@ -1,6 +1,6 @@
 from  . import db
 from werkzeug.security import generate_password_hash,check_password_hash
-from flask_login import UserMixin
+from flask_login import UserMixin,current_user
 from . import login_manager
 from datetime import datetime
 
@@ -152,5 +152,13 @@ class Downvote(db.Model):
 
     def __repr__(self):
         return f'{self.user_id}:{self.post_id}'
+
+class Subscriber(db.Model):
+    __tablename__ = 'subscribers'
+    id = db.Column(db.Integer,primary_key = True)
+    name = db.Column(db.String(20))
+    email = db.Column(db.String(), unique = True)  
+    
+    
 
 
