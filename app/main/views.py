@@ -1,9 +1,9 @@
 
 from flask import render_template,request,redirect,url_for
-
 from app.requests import get_quote
 from app.main import main
 # from models import Quote
+from flask_login import login_required
 
 # Views
 @main.route('/')

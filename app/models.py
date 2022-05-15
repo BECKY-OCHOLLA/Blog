@@ -1,6 +1,12 @@
 from  . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+
 class Quote:
     '''
     Quote class to define Quotes Objects
@@ -29,7 +35,7 @@ class User(UserMixin,db.Model):
         self.secure_password = generate_password_hash(password)
     def verify_password(self, password):
         return check_password_hash(self.secure_password,password) 
-        
+
     def save_u(self):
         db.session.add(self)
         db.session.commit()
