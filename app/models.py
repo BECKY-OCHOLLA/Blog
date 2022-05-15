@@ -1,3 +1,5 @@
+from  . import db
+
 class Quote:
     '''
     Quote class to define Quotes Objects
