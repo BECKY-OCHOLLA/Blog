@@ -57,7 +57,7 @@ def subscriber():
         db.session.add(subscriber)
         db.session.commit()
 
-        mail_message("Welcome to BlogTech.com","email/welcome_subscriber",subscriber.email,subscriber=subscriber)
+        mail_message("Welcome to Blogguer Site","email/welcome_subscriber",subscriber.email,subscriber=subscriber)
 
         title= "BlogTech.com"
        
