@@ -6,6 +6,8 @@ from datetime import datetime
 
 
 
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -27,7 +29,7 @@ class User(UserMixin,db.Model):
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True)
-    bio = db.Column(db.String(255))
+    # bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     secure_password = db.Column(db.String(255),nullable = False)
 
@@ -46,6 +48,16 @@ class User(UserMixin,db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+
+    # def set_password(self, password):
+    #     pass_hash = generate_password_hash(password)
+    #     self.password = pass_hash
+
+    # def check_password(self, password):
+    #     return check_password_hash(self.password, password)
+
+
+
     def __repr__(self):
         return f'User {self.username}'
 

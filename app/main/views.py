@@ -27,7 +27,7 @@ def index():
     '''
     Quote = get_quote()
    
-    title = 'BlogTech.com'
+    title = 'Blogguer Site'
     return render_template('index.html',  title = title, Quote=Quote)
 
 @main.route('/user/<uname>')

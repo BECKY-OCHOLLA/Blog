@@ -59,7 +59,7 @@ def subscriber():
 
         mail_message("Welcome to Blogguer Site","email/welcome_subscriber",subscriber.email,subscriber=subscriber)
 
-        title= "BlogTech.com"
+        title= "Blogguer Site"
        
         return redirect(url_for('main.blog', title=title, blogs=blogs, subscriber_form=subscriber_form))
 
