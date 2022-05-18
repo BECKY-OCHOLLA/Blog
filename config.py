@@ -34,7 +34,9 @@ class DevConfig(Config):
     '''
     child configurations to the parent
     '''
-    
+    # SQLALCHEMY_DATABASE_URI = '"sqlite:///database.sqlite"://moringa:access@localhost/pitchy'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:access@localhost/blog'
+   
     DEBUG=True
 
 config_options = {

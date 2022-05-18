@@ -1,4 +1,13 @@
-{% extends 'base.html' %} {% from 'display_macro.html' import display_blogs %} {% from 'comment_macro.html' import display_comments %} {% block content %}
-<div> {{ display_blogs(blogs) }}</div>
-<div class="card-body">{{display_comments(comments)}}</div>
+{% extends 'base.html' %}
+{% from 'display_macro.html' import display_blogs %} 
+{% from 'comment_macro.html' import display_comments %} 
+{% block content %}
+
+<div style="background-color: rgb(90, 90, 216);">
+    <div> {{ display_blogs(blogs) }}</div>
+    <div class="card-body">{{display_comments(comments)}}</div>
+    
+     
+
+</div>
 {% endblock %}
