@@ -28,7 +28,12 @@ class ProdConfig(Config):
     '''
     child configuration to the parent
     '''
-    pass
+    uri = os.environ.get("DATABASE_URL")  # or other relevant config var
+    if uri.startswith("postgres://"):
+        uri = uri.replace("postgres://", "postgresql://", 1)
+        # rest of connection code using the connection string `uri`
+    SQLALCHEMY_DATABASE_URI = uri
+
 
 class DevConfig(Config):
     '''

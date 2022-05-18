@@ -172,6 +172,6 @@ def downvote(id):
 @login_required
 def delete_comment(id):
     comments = Comment.query.filter_by(id=id).first()
-    post_id = comment.blog
+    post_id = comment.delete
     Comment.delete_comment(id)
     return redirect(url_for('main.blog',id=post_id))
