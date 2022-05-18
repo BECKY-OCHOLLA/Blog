@@ -2,12 +2,12 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/particle.css')}}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> {% endblock %}
 <title>{{title}}</title>
-<div class="container">
+<div class="container" style="height: auto;display: flex;justify-content: centre;background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=820&q=80');background-size: cover;background-repeat: no-repeat;height: 700px;background-position: center;">
 
-    <div class="row">
+    <div class="row" style="margin-top: 100px;">
 
 
-        <div class="col-md-4" style="color: white;">
+        <!-- <div class="col-md-4" style="color: white;">
             <h3> {{user.username| capitalize}} </h3>
 
             {% if user.bio %}
@@ -16,10 +16,10 @@
             {%else%}
             <p> {{user.username| capitalize}} has no bio </p>
             {% endif %} {% if user == current_user %}
-            <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a> {% endif %}
+            <a href="{{url_for('main.update_profile',uname=user.username)}}" style="font-size: x-large;font-weight: bold;">Edit profile</a> {% endif %}
 
-        </div>
-        <div class="col-md-4">
+        </div> -->
+        <div class="col-md-4" >
             {% if user.profile_pic_path %}
 
             <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail"> {%else%}

@@ -6,11 +6,13 @@ class Config:
     parent configuration
 
     '''
-    QUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
+  
 
-    # SECRET_KEY = os.environ.get('SECRET_KEY')
-    SECRET_KEY = 'love1234'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:access@localhost/blog'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI=os.environ.get(' SQLALCHEMY_DATABASE_URI')
+    QUOTE_API_BASE_URL=os.environ.get('QUOTE_API_BASE_URL')
+
+   
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

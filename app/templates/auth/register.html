@@ -1,12 +1,13 @@
 {% extends 'base.html'%} {% import 'bootstrap/wtf.html' as wtf%} {% block content %} {% block styles %} {{super()}}
 <link rel="stylesheet" href="{{url_for('static',filename='css/particle.css')}}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> {% endblock %}
-<div class="container">
-    <div class="row">
+<div class="container-fluid" style="background-image: url('https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80');
+;background-repeat: no-repeat;background-repeat: no-repeat;background-size: cover;height: 700px;">
+    <div class="row" style="margin-top: 200px;justify-content: center;">
         <div class="col-md-2"> </div>
-        <div class="col-md-8" style="color: rgb(255, 242, 240);">
+        <div class="col-md-8" style="color:black">
 
-           <div style="background-color: palegreen;">{{wtf.quick_form(registration_form)}}</div> 
+           <div style="background-color: rgb(239, 152, 251);">{{wtf.quick_form(registration_form)}}</div> 
         </div>
         <div class="col-md-2"></div>
     </div>
